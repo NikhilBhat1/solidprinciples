@@ -1,0 +1,43 @@
+package com.ilp.entity;
+
+class Account {
+    private String accountId;
+    private SubscriptionType subscriptionType;
+    private List<Profile> profiles;
+
+    public Account(String accountId, SubscriptionType subscriptionType, List<Profile> profiles) {
+        this.accountId = accountId;
+        this.subscriptionType = subscriptionType;
+        this.profiles = profiles;
+    }
+
+	public String getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+
+	public SubscriptionType getSubscriptionType() {
+		return subscriptionType;
+	}
+
+	public void setSubscriptionType(SubscriptionType subscriptionType) {
+		this.subscriptionType = subscriptionType;
+	}
+
+	public List<Profile> getProfiles() {
+		return profiles;
+	}
+
+	public void setProfiles(List<Profile> profiles) {
+		this.profiles = profiles;
+	}
+
+  
+}
+
+
+
+

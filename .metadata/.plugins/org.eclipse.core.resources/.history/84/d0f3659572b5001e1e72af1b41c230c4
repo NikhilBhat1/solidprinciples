@@ -1,0 +1,17 @@
+package com.ilp.entity;
+
+public class StandardSubscription extends SubscriptionType {
+
+	@Override
+	public String getSubscriptionName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

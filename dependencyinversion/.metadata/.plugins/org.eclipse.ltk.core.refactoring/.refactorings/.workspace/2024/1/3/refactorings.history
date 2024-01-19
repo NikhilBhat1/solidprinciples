@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OCP&apos; to &apos;DependencyInversion&apos;" description="Rename resource &apos;OCP&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/OCP" name="DependencyInversion" stamp="1705671535875" updateReferences="true"/>
+</session>

@@ -1,0 +1,23 @@
+package com.ilp.entity;
+
+import com.ilp.interfaces.Subscription;
+
+public class SubscriptionType implements Subscription {
+	private int devicelimit;
+
+	public SubscriptionType(int devicelimit) {
+		super();
+		this.devicelimit = devicelimit;
+	}
+
+	public int getDevicelimit() {
+		return devicelimit;
+	}
+
+	public void setDevicelimit(int devicelimit) {
+		this.devicelimit = devicelimit;
+	}
+
+	
+
+}

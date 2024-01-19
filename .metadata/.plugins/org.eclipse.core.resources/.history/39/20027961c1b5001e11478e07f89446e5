@@ -1,0 +1,53 @@
+package com.ilp.utility;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import com.ilp.entity.*;
+import com.ilp.interfaces.*;
+public class NetflixUtility {
+
+	    public static void main(String[] args) {
+	        // Creating profiles
+	        Profiles profile1 = new Profiles("1", "Profile1");
+	        Profiles profile2 = new Profiles("2", "Profile2");
+
+	        // Creating subscription type
+	        SubscriptionType basicSubscription = new BasicSubscription(3);
+
+	        // Creating account with multiple profiles and the subscription type
+	        ArrayList<Profiles> profiles = new ArrayList<>();
+	        profiles.add(profile1);
+	        profiles.add(profile2);
+
+	        Account account = new Account("A1", basicSubscription, profiles);
+
+	        // Creating a customer with the account
+//	        ArrayList<Account> customerAccounts = new ArrayList<>();
+//	        customerAccounts.add(account);
+
+	        Customer customer = new Customer("C1", "Customer1", account);
+
+	        // Displaying information
+	       
+	    }
+
+
+
+private static void displayCustomerInfo(Customer customer) {
+    System.out.println("Customer ID: " + customer.getCustomerId());
+    System.out.println("Customer Name: " + customer.getCustomerName());
+
+    // Accessing the single account directly without using a loop
+    Account account = customer.getAccount();
+    System.out.println("Account ID: " + account.getAccountId());
+    System.out.println("Subscription Type: " + account.getSubscriptionType().getSubscriptionName());
+
+    System.out.println("Profiles:");
+    for (Profiles profile : account.getProfiles()) {
+        System.out.println("  Profile ID: " + profile.getProfileId());
+        System.out.println("  Profile Name: " + profile.getProfileName());
+    }
+
+    System.out.println("---------------------------");
+}
+}

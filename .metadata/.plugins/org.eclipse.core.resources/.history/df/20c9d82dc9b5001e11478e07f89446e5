@@ -1,0 +1,8 @@
+package com.ilp.interfaces;
+
+public interface VideoStreaming {
+	
+	    void stream1080pVideo();
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.ilp.entity;
+
+public class BasicSubscription extends SubscriptionType {
+
+	public BasicSubscription(int devicelimit) {
+		super(devicelimit);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "Basic";
+	}
+
+	@Override
+	public int getprice() {
+		// TODO Auto-generated method stub
+		return 199;
+	}
+
+}

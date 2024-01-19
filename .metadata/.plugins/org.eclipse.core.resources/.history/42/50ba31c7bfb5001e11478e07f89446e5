@@ -1,0 +1,58 @@
+package com.ilp.utility;
+import com.ilp.entity.*;
+public class NetflixUtility {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Profiles profile1 = new Profiles("1", "Profile1");
+	        Profiles profile2 = new Profiles("2", "Profile2");
+
+	        // Creating subscription types
+	        SubscriptionType basicSubscription = new BasicSubscription(1);
+	        SubscriptionType standardSubscription = new StandardSubscription(2);
+	        SubscriptionType premiumSubscription = new PremiumSubscription(3);
+
+	        // Creating accounts with profiles and subscription types
+	        ArrayList<Profile> profiles1 = Arrays.asList(profile1, profile2);
+	        Account account1 = new Account("A1", basicSubscription, profiles1);
+
+	        List<Profile> profiles2 = Collections.singletonList(profile1);
+	        Account account2 = new Account("A2", standardSubscription, profiles2);
+
+	        List<Profile> profiles3 = Arrays.asList(profile2);
+	        Account account3 = new Account("A3", premiumSubscription, profiles3);
+
+	        // Creating customers with accounts
+	        List<Account> customer1Accounts = Arrays.asList(account1, account2);
+	        Customer customer1 = new Customer("C1", "Customer1", customer1Accounts);
+
+	        List<Account> customer2Accounts = Collections.singletonList(account3);
+	        Customer customer2 = new Customer("C2", "Customer2", customer2Accounts);
+
+	        // Displaying information
+	        displayCustomerInfo(customer1);
+	        displayCustomerInfo(customer2);
+	    }
+
+	    private static void displayCustomerInfo(Customer customer) {
+	        System.out.println("Customer ID: " + customer.getCustomerId());
+	        System.out.println("Customer Name: " + customer.getCustomerName());
+
+	        System.out.println("Accounts:");
+	        for (Account account : customer.getAccounts()) {
+	            System.out.println("  Account ID: " + account.getAccountId());
+	            System.out.println("  Subscription Type: " + account.getSubscriptionType().getSubscriptionName());
+	            System.out.println("  Profiles:");
+	            for (Profile profile : account.getProfiles()) {
+	                System.out.println("    Profile ID: " + profile.getProfileId());
+	                System.out.println("    Profile Name: " + profile.getProfileName());
+	            }
+	            System.out.println();
+	        }
+	        System.out.println("---------------------------");
+	    
+	
+
+	}
+
+}

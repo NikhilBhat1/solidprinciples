@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.ilp.interfaces.Subscription"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.ilp.interfaces.VideoStreaming"/>
+    <fullyQualifiedTypeName name="com.ilp.entity.StandardSubscription"/>
+</qualifiedTypeNameHistroy>
