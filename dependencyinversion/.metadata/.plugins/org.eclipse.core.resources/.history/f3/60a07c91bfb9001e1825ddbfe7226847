@@ -11,7 +11,7 @@ public class SubscriptionType {
 		 Subscription subscription=new BasicSubscription();
 
 	   
-		 System.out.println("subscriptiontype=" + subscription.getName());
+		 System.out.println("subscriptiontype=" + subscription.getprice());
 
 	}
 
